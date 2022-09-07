@@ -52,15 +52,15 @@
 // Unobtrusive trans
 #define ________ &trans
 
-#define SUPER_1 &kc ESCAPE
-#define SUPER_2 &kc TAB
+#define SUPER_1 &kp ESCAPE
+#define SUPER_2 &kp TAB
 // Was KC_BTN1 on qmk keymap, but not supported in stock zmk yet.
 #define SUPER_3 &none
-#define SUPER_4 &kc BACKSPACE
-#define SUPER_5 &kc ENTER
-#define SUPER_6 &kc LCTRL
+#define SUPER_4 &kp BACKSPACE
+#define SUPER_5 &kp ENTER
+#define SUPER_6 &kp LCTRL
 #define SUPER_7 &to BASE
-#define SUPER_8 &kc LSHFT
+#define SUPER_8 &kp LSHFT
 
 // layer aliases
 #define BASE 0
