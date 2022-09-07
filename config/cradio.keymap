@@ -10,24 +10,43 @@
 #include <dt-bindings/zmk/bt.h>
 
 // 4 or fewer character keycode aliases to keep the layouts nice
+#undef COMM
 #define COMM COMMA
+#undef PERC
 #define PERC PERCENT
+#undef CIRC
 #define CIRC CARET
+#undef TILD
 #define TILD TILDE
+#undef EQL
 #define EQL EQUAL
+#undef MINS
 #define MINS MINUS
+#undef GRV
 #define GRV GRAVE
+#undef UNDS
 #define UNDS UNDERSCORE
+#undef RGHT 
 #define RGHT RIGHT
+#undef SPC
 #define SPC SPACE
+#undef STOP
 #define STOP C_STOP
+#undef PREV 
 #define PREV C_PREVIOUS
+#undef NEXT
 #define NEXT C_NEXT
+#undef VOLU 
 #define VOLU C_VOLUME_UP
+#undef VOLD 
 #define VOLD C_VOLUME_DOWN
+#undef PLAY
 #define PLAY C_PLAY_PAUSE
+#undef BRIU
 #define BRIU C_BRIGHTNESS_INC
+#undef BRID
 #define BRID C_BRIGHTNESS_DEC
+#undef MUTE
 #define MUTE C_MUTE
 
 // Unobtrusive trans
