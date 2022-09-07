@@ -125,7 +125,7 @@
         SUPER_1  &kp STOP &kp PREV &kp NEXT ________           &kp N1   &kp N7   &kp N8   &kp N9   SUPER_4 
         SUPER_2  &kp VOLU &kp VOLD &kp PLAY ________           &kp SPC  &kp N4   &kp N5   &kp N6   SUPER_5 
         SUPER_3  &kp BRID &kp BRIU &kp MUTE ________           &kp N0   &kp N1   &kp N2   &kp N3   &sl NUMX 
-                                   SUPER_6  SUPER_7            &kp ____ SUPER_8
+                                   SUPER_6  SUPER_7            ________ SUPER_8
       >;
     };
 
