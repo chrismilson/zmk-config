@@ -62,6 +62,13 @@
 #define SUPER_7 &to BASE
 #define SUPER_8 &kc LSHFT
 
+// layer aliases
+#define BASE 0
+#define SPEC 1
+#define ARRW 2
+#define NUMS 3
+#define NUMX 4
+
 &sl {
   release-after-ms = <2000>;
 };
