@@ -59,15 +59,20 @@
 #define SUPER_4 &kp BACKSPACE
 #define SUPER_5 &kp ENTER
 #define SUPER_6 &kp LCTRL
-#define SUPER_7 &to BASE
+#define SUPER_7 ________
 #define SUPER_8 &kp LSHFT
 
 // layer aliases
 #define BASE 0
 #define SPEC 1
-#define ARRW 2
-#define NUMS 3
-#define NUMX 4
+#define NUMS 2
+#define NUMX 3
+#define ARRW 4
+
+#define GUI_FSLH &mt GUI FSLH
+#define GUI_Z &mt GUI Z
+#define ALT_X &mt ALT X
+#define ALT_DOT &mt ALT DOT
 
 &sl {
   release-after-ms = <2000>;
@@ -85,6 +90,14 @@
 //    }
 //  };
 
+  conditional_layers {
+    compatible = "zmk,conditional-layers"; 
+    tri_layer {
+      if-layers = <SPEC NUMS>;
+      then-layer = <ARRW>;
+    };
+  };
+
   keymap {
     compatible = "zmk,keymap";
 
@@ -93,8 +106,8 @@
       bindings = <
         &kp Q    &kp W    &kp E    &kp R    &kp T              &kp Y    &kp U    &kp I    &kp O    &kp P
         &kp A    &kp S    &kp D    &kp F    &kp G              &kp H    &kp J    &kp K    &kp L    &kp SEMI
-        &kp Z    &kp X    &kp C    &kp V    &kp B              &kp N    &kp M    &kp COMM &kp DOT  &kp FSLH
-                                   &kp LGUI &kp SPC            &to SPEC &kp LSHFT
+        GUI_Z    ALT_X    &kp C    &kp V    &kp B              &kp N    &kp M    &kp COMM ALT_DOT  GUI_FSLH
+                             &mt LCTL ENTER &lt SPEC SPC       &lt NUMS BSPC &kp LSHFT
       >;
     };
 
@@ -103,18 +116,7 @@
       bindings = <
         SUPER_1  &kp AT   &kp HASH &kp DLLR &kp PERC           &kp CIRC &kp AMPS &kp STAR &kp TILD SUPER_4 
         SUPER_2  &kp EXCL &kp EQL  &kp MINS &kp APOS           &kp GRV  &kp BSLH &kp LBRC &kp RBRC SUPER_5 
-        SUPER_3  ________ &kp PLUS &kp UNDS &kp DQT            &kp LPAR &kp RPAR &kp LBKT &kp RBKT &tog ARRW
-                                   SUPER_6  SUPER_7            &to NUMS SUPER_8
-      >;
-    };
-
-    arrow_layer {
-      label = "ARRW";
-      // Left hand contained mouse control - not supported in stock zmk yet.
-      bindings = <
-        SUPER_1  ________ ________ ________ &reset             &reset   ________ ________ ________ SUPER_4 
-        SUPER_2  ________ ________ ________ ________           &kp LEFT &kp DOWN &kp UP   &kp RGHT SUPER_5 
-        SUPER_3  ________ ________ ________ ________           ________ ________ ________ ________ ________
+        SUPER_3  &kp PIPE &kp PLUS &kp UNDS &kp DQT            &kp LPAR &kp RPAR &kp LBKT &kp RBKT ________
                                    SUPER_6  SUPER_7            ________ SUPER_8
       >;
     };
@@ -122,7 +124,7 @@
     number_layer {
       label = "NUMS";
       bindings = <
-        SUPER_1  &kp STOP &kp PREV &kp NEXT ________           &kp N1   &kp N7   &kp N8   &kp N9   SUPER_4 
+        SUPER_1  &kp STOP &kp PREV &kp NEXT ________           &kp UNDS &kp N7   &kp N8   &kp N9   SUPER_4 
         SUPER_2  &kp VOLU &kp VOLD &kp PLAY ________           &kp SPC  &kp N4   &kp N5   &kp N6   SUPER_5 
         SUPER_3  &kp BRID &kp BRIU &kp MUTE ________           &kp N0   &kp N1   &kp N2   &kp N3   &sl NUMX 
                                    SUPER_6  SUPER_7            ________ SUPER_8
@@ -135,6 +137,17 @@
         SUPER_1  &kp F7   &kp F8   &kp F9   &kp F12            ________ ________ ________ ________ SUPER_4 
         SUPER_2  &kp F4   &kp F5   &kp F6   &kp F11            ________ &kp PLUS &kp STAR &kp DOT  SUPER_5 
         SUPER_3  &kp F1   &kp F2   &kp F3   &kp F10            &kp COLN &kp MINS &kp FSLH &kp COMM &none
+                                   SUPER_6  SUPER_7            ________ SUPER_8
+      >;
+    };
+
+    arrow_layer {
+      label = "ARRW";
+      // Left hand contained mouse control - not supported in stock zmk yet.
+      bindings = <
+        SUPER_1  ________ ________ ________ ________           ________ ________ ________ ________ SUPER_4 
+        SUPER_2  ________ ________ ________ ________           &kp LEFT &kp DOWN &kp UP   &kp RGHT SUPER_5 
+        SUPER_3  ________ ________ ________ ________           ________ ________ ________ ________ ________
                                    SUPER_6  SUPER_7            ________ SUPER_8
       >;
     };
