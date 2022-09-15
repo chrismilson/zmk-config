@@ -69,10 +69,10 @@
 #define NUMX 3
 #define ARRW 4
 
-#define GUI_FSLH &mt GUI FSLH
-#define GUI_Z &mt GUI Z
-#define ALT_X &mt ALT X
-#define ALT_DOT &mt ALT DOT
+#define GUI_FSLH &mt LGUI FSLH
+#define GUI_Z &mt LGUI Z
+#define ALT_X &mt LALT X
+#define ALT_DOT &mt LALT DOT
 
 &sl {
   release-after-ms = <2000>;
