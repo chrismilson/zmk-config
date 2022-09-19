@@ -55,6 +55,8 @@
 #define BT_2 &bt BT_SEL 2
 #define BT_3 &bt BT_SEL 3
 #define BT_4 &bt BT_SEL 4
+#define USE_USB &out OUT_USB
+#define USE_BLE &out OUT_BLE
 
 // Unobtrusive trans
 #define ________ &trans
@@ -152,7 +154,7 @@
       label = "ARRW";
       // Left hand contained mouse control - not supported in stock zmk yet.
       bindings = <
-        SUPER_1  ________ ________ ________ BT_CLEAR           ________ ________ ________ ________ SUPER_4 
+        SUPER_1  USE_USB  USE_BLE  ________ BT_CLEAR           ________ ________ ________ ________ SUPER_4 
         SUPER_2  BT_3     BT_4     ________ ________           &kp LEFT &kp DOWN &kp UP   &kp RGHT SUPER_5 
         SUPER_3  BT_0     BT_1     BT_2     ________           ________ ________ ________ ________ ________
                                    SUPER_6  SUPER_7            ________ SUPER_8
