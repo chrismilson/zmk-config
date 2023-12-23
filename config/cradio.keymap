@@ -78,11 +78,14 @@
 #define NUMS 2
 #define NUMX 3
 #define ARRW 4
+#define GAME 5
+#define GAMX 6
 
 #define GUI_FSLH &mt LGUI FSLH
 #define GUI_Z &mt LGUI Z
 #define ALT_X &mt LALT X
 #define ALT_DOT &mt LALT DOT
+#define ESC_TIL &mt ESCAPE TILDE
 
 &sl {
   release-after-ms = <2000>;
@@ -159,6 +162,26 @@
         SUPER_2  BT_3     BT_4     ________ ________           &kp LEFT &kp DOWN &kp UP   &kp RGHT SUPER_5 
         SUPER_3  BT_0     BT_1     BT_2     ________           ________ ________ ________ ________ ________
                                    SUPER_6  SUPER_7            ________ SUPER_8
+      >;
+    };
+    
+    game_layer {
+      label = "GAME";
+      bindings = <
+        ESC_TIL  &kp Q    &kp W    &kp E    &kp R              &kp Y    &kp U    &kp I    &kp O    &kp P
+        SUPER_8  &kp A    &kp S    &kp D    &kp F              &kp H    &kp J    &kp K    &kp L    &kp SEMI
+        SUPER_6  GUI_Z    ALT_X    &kp C    &kp V              &kp N    &kp M    &kp COMM &kp DOT  &kp FSLH
+                               &mo GAMX &kp SPACE              &kp T    &kp G
+      >;
+    };
+    
+    game_aux_layer {
+      label = "GAMX";
+      bindings = <
+        ________ &kp N7   &kp N8   &kp N9   ________           ________ ________ ________ ________ ________ 
+        ________ &kp N4   &kp N5   &kp N6   ________           ________ ________ ________ ________ ________ 
+        ________ &kp N1   &kp N2   &kp N3   ________           ________ ________ ________ ________ ________ 
+                                   ________ ________           ________ ________ 
       >;
     };
   };
