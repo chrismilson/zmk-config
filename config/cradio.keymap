@@ -85,7 +85,7 @@
 #define GUI_Z &mt LGUI Z
 #define ALT_X &mt LALT X
 #define ALT_DOT &mt LALT DOT
-#define ESC_TIL &mt ESCAPE TILDE
+#define ESC_TIL &mt TILDE ESCAPE # Tilde on hold and escape on tap
 
 &sl {
   release-after-ms = <2000>;
