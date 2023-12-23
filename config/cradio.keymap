@@ -158,7 +158,7 @@
       label = "ARRW";
       // Left hand contained mouse control - not supported in stock zmk yet.
       bindings = <
-        SUPER_1  USE_USB  USE_BLE  ________ BT_CLEAR           ________ ________ ________ ________ SUPER_4 
+        SUPER_1  USE_USB  USE_BLE  ________ BT_CLEAR           &to GAME ________ ________ ________ SUPER_4 
         SUPER_2  BT_3     BT_4     ________ ________           &kp LEFT &kp DOWN &kp UP   &kp RGHT SUPER_5 
         SUPER_3  BT_0     BT_1     BT_2     ________           ________ ________ ________ ________ ________
                                    SUPER_6  SUPER_7            ________ SUPER_8
@@ -178,7 +178,7 @@
     game_aux_layer {
       label = "GAMX";
       bindings = <
-        ________ &kp N7   &kp N8   &kp N9   ________           ________ ________ ________ ________ ________ 
+        ________ &kp N7   &kp N8   &kp N9   ________           &to BASE ________ ________ ________ ________ 
         ________ &kp N4   &kp N5   &kp N6   ________           ________ ________ ________ ________ ________ 
         ________ &kp N1   &kp N2   &kp N3   ________           ________ ________ ________ ________ ________ 
                                    ________ ________           ________ ________ 
