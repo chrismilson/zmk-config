@@ -85,7 +85,6 @@
 #define GUI_Z &mt LGUI Z
 #define ALT_X &mt LALT X
 #define ALT_DOT &mt LALT DOT
-#define ESC_TIL &mt TILDE ESCAPE # Tilde on hold and escape on tap
 
 &sl {
   release-after-ms = <2000>;
@@ -168,7 +167,7 @@
     game_layer {
       label = "GAME";
       bindings = <
-        ESC_TIL  &kp Q    &kp W    &kp E    &kp R              &kp Y    &kp U    &kp I    &kp O    &kp P
+        SUPER_1  &kp Q    &kp W    &kp E    &kp R              &kp Y    &kp U    &kp I    &kp O    &kp P
         SUPER_8  &kp A    &kp S    &kp D    &kp F              &kp H    &kp J    &kp K    &kp L    &kp SEMI
         SUPER_6  GUI_Z    ALT_X    &kp C    &kp V              &kp N    &kp M    &kp COMM &kp DOT  &kp FSLH
                                &mo GAMX &kp SPACE              &kp T    &kp G
