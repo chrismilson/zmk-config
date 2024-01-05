@@ -78,8 +78,9 @@
 #define NUMS 2
 #define NUMX 3
 #define ARRW 4
-#define GAME 5
-#define GAMX 6
+#define EPHO 5
+#define GAME 6
+#define GAMX 7
 
 #define GUI_FSLH &mt LGUI FSLH
 #define GUI_Z &mt LGUI Z
@@ -157,27 +158,38 @@
       label = "ARRW";
       // Left hand contained mouse control - not supported in stock zmk yet.
       bindings = <
-        SUPER_1  USE_USB  USE_BLE  ________ BT_CLEAR           &to GAME ________ ________ ________ SUPER_4 
+        SUPER_1  USE_USB  USE_BLE  ________ BT_CLEAR           ________ ________ ________ ________ SUPER_4 
         SUPER_2  BT_3     BT_4     ________ ________           &kp LEFT &kp DOWN &kp UP   &kp RGHT SUPER_5 
-        SUPER_3  BT_0     BT_1     BT_2     ________           ________ ________ ________ ________ ________
+        SUPER_3  BT_0     BT_1     BT_2     &to EPHO           ________ ________ ________ ________ ________
                                    SUPER_6  SUPER_7            ________ SUPER_8
+      >;
+    };
+
+    ephemeral_home {
+      label = "EPHO";
+      // Layer to link to seldom-used layers.
+      bindings = <
+        ________ &to GAME ________ ________ ________           ________ ________ ________ ________ ________ 
+        ________ ________ ________ ________ ________           ________ ________ ________ ________ ________ 
+        ________ ________ ________ ________ ________           ________ ________ ________ ________ ________ 
+                                   ________ ________           ________ ________ 
       >;
     };
     
     game_layer {
       label = "GAME";
       bindings = <
-        SUPER_1  &kp Q    &kp W    &kp E    &kp R              &kp Y    &kp U    &kp I    &kp O    &kp P
-        SUPER_8  &kp A    &kp S    &kp D    &kp F              &kp H    &kp J    &kp K    &kp L    &kp SEMI
-        SUPER_6  GUI_Z    ALT_X    &kp C    &kp V              &kp N    &kp M    &kp COMM &kp DOT  &kp FSLH
-                               &mo GAMX &kp SPACE              &kp T    &kp G
+        SUPER_1  &kp Q    &kp W    &kp E    &kp R              ________ ________ ________ ________ ________ 
+        SUPER_8  &kp A    &kp S    &kp D    &kp F              ________ ________ ________ ________ ________ 
+        SUPER_6  GUI_Z    ALT_X    &kp C    &kp V              ________ ________ ________ ________ ________ 
+                               &mo GAMX &kp SPACE              &to BASE ________
       >;
     };
     
     game_aux_layer {
       label = "GAMX";
       bindings = <
-        ________ &kp N7   &kp N8   &kp N9   ________           &to BASE ________ ________ ________ ________ 
+        ________ &kp N7   &kp N8   &kp N9   ________           ________ ________ ________ ________ ________ 
         ________ &kp N4   &kp N5   &kp N6   ________           ________ ________ ________ ________ ________ 
         ________ &kp N1   &kp N2   &kp N3   ________           ________ ________ ________ ________ ________ 
                                    ________ ________           ________ ________ 
